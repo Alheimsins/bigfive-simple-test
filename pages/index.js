@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getItems } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r'
-import { language } from '../config'
+import config from '../config'
 import Questions from '../components/questions'
 import Result from '../components/result'
 
@@ -9,7 +9,7 @@ function HomePage() {
   const result = null
 
   useEffect(() => {
-    setQuestions(getItems(language, true))
+    setQuestions(getItems(config.language, true))
   }, [])
 
   return (
