@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/Alheimsins/bigfive-simple-test#readme",
   "dependencies": {
+    "@alheimsins/b5-johnson-120-ipip-neo-pi-r": "6.0.2",
+    "@alheimsins/b5-result-text": "5.0.0",
+    "@alheimsins/bigfive-calculate-score": "3.0.0",
     "autoprefixer": "10.3.1",
     "next": "11.0.1",
     "postcss": "8.3.6",
