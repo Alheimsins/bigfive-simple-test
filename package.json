@@ -1,0 +1,36 @@
+{
+  "name": "bigfive-simple-test",
+  "version": "1.0.0",
+  "description": "Take a big five test on your local machine and save the result",
+  "main": "index.js",
+  "scripts": {
+    "test": "next lint",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alheimsins/bigfive-simple-test.git"
+  },
+  "keywords": [],
+  "author": "Geir Gåsodden <geir.gasodden@pythonia.no> (https://github.com/zrrrzzt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alheimsins/bigfive-simple-test/issues"
+  },
+  "homepage": "https://github.com/Alheimsins/bigfive-simple-test#readme",
+  "dependencies": {
+    "autoprefixer": "10.3.1",
+    "next": "11.0.1",
+    "postcss": "8.3.6",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "tailwindcss": "2.2.7"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1"
+  }
+}
