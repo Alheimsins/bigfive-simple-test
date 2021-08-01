@@ -1,6 +1,6 @@
 const config = {
   language: 'en',
-  directory: '/results'
+  directory: '../../results'
 }
 
 export default config
