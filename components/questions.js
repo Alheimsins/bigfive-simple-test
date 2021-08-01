@@ -1,5 +1,6 @@
 import axios from 'axios'
 import generatePayload from '../lib/generate-payload'
+import Question from './question'
 
 function Questions ({ questions }) {
 
@@ -21,7 +22,7 @@ function Questions ({ questions }) {
     <div>
       <form id='bigfive-test' onSubmit={handleSubmit} className='space-y-8 divide-y divide-gray-200'>
         <div className='space-y-8 divide-y divide-gray-200'>
-          {JSON.stringify(questions, null, 2)}
+          {questions.map((question => <Question key={question.id} {...question} />))}
         </div>
         <div className="pt-5">
         <div className="flex justify-end">
