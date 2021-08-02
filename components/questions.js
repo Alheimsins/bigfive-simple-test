@@ -1,15 +1,20 @@
 import axios from 'axios'
 import generatePayload from '../lib/generate-payload'
+import repackAnswers from '../lib/repack-answers'
 import Question from './question'
 
 function Questions ({ questions }) {
 
   const handleSubmit = async event => {
-    console.log('herewego')
     event.preventDefault()
     const form = document.getElementById('bigfive-test')
+    const data = generatePayload(form)
+    const answers = repackAnswers(data)
+    const payload = {
+      answers: Object.values(answers)
+    }
     try {
-      await axios.post('/api/save', generatePayload(form))
+      await axios.post('/api/save', payload)
       form.reset()
     } catch (error) {
       console.error(error)

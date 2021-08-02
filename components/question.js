@@ -3,13 +3,13 @@ function Choice ( props ) {
   return (
     <div className="flex items-center">
       <input
-        id={`${id}-question-${score}`}
-        name={`${id}-question`}
+        id={`${id}-score-${score}`}
+        name={`${id}-score`}
         type="radio"
         value={score}
         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
       />
-      <label htmlFor={`${id}-question-${score}`} className="ml-3 block text-sm font-medium text-gray-700">
+      <label htmlFor={`${id}-score-${score}`} className="ml-3 block text-sm font-medium text-gray-700">
         {text}
       </label>
     </div>
