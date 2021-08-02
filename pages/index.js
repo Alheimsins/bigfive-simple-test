@@ -13,9 +13,15 @@ function HomePage() {
   }, [])
 
   return (
-    <div>
-      <Questions questions={questions} />
-      <Result result={result} />
+    <div className='flex flex-col min-h-screen'>
+      <main className='flex-grow'>
+        <div className='max-w-7xl mx-auto py-6 sm:px-6 lg:px-8'>
+          <div className='px-4 py-4 sm:px-0'>
+            <Questions questions={questions} />
+            <Result result={result} />
+          </div>
+        </div>
+      </main>
     </div>
   )
 }
