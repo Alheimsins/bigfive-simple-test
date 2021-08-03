@@ -8,8 +8,8 @@ function Facet (props) {
   const { title, text, score, scoreText } = props
   return (
     <div className="mb-2">
-      <h3>{title}</h3>
-      <p>Score: {score} - {scoreText}</p>
+      <h3 className='text-xl'>{title}</h3>
+      <p className='mb-1 font-semibold'>Score: {score} - {scoreText}</p>
       <p dangerouslySetInnerHTML={{ __html: text }}></p>
     </div>
   )
@@ -19,13 +19,13 @@ function Domain ( props ) {
   const { title, shortDescription, description, text, score, facets } = props
   return (
     <div className='mb-5'>
-      <h1>{title}</h1>
+      <h1 className='text-4xl'>{title}</h1>
       <p>{shortDescription}</p>
-      <p>Score: {score}</p>
+      <p className='mb-2'>Score: {score}</p>
       <p dangerouslySetInnerHTML={{ __html: text }}></p>
       <p dangerouslySetInnerHTML={{ __html: description }}></p>
-      <h2>Facets</h2>
-      {facets.map(data => <Facet {...data} />)}
+      <h2 className='text-2xl mb-2 mt-2'>Facets</h2>
+      {facets.map(data => <Facet {...data} key={`facet-${domain}-${data.facet}`} />)}
     </div>
   )
 }
@@ -50,11 +50,12 @@ function Result ({ result, setResult }) {
   }, [result, score])
 
   if (!result) return null
+  if (!text) return null
 
   return (
     <div>
       <div>
-        {text.map(data => <Domain {...data} />)}
+        {text.map(data => <Domain {...data} key={`domain-${data.domain}`} />)}
       </div>
       <div className="pt-5">
         <div className="flex justify-end">
