@@ -4,6 +4,33 @@ import generateResult from '@alheimsins/b5-result-text'
 
 import config from '../config'
 
+function Facet (props) {
+  const { title, text, score, scoreText } = props
+  return (
+    <div className="mb-2">
+      <h3>{title}</h3>
+      <p>Score: {score} - {scoreText}</p>
+      <p dangerouslySetInnerHTML={{ __html: text }}></p>
+    </div>
+  )
+}
+
+function Domain ( props ) {
+  const { title, shortDescription, description, text, score, facets } = props
+  return (
+    <div className='mb-5'>
+      <h1>{title}</h1>
+      <p>{shortDescription}</p>
+      <p>Score: {score}</p>
+      <p dangerouslySetInnerHTML={{ __html: text }}></p>
+      <p dangerouslySetInnerHTML={{ __html: description }}></p>
+      <h2>Facets</h2>
+      {facets.map(data => <Facet {...data} />)}
+    </div>
+  )
+}
+
+
 function Result ({ result, setResult }) {
   const [score, setScore] = useState()
   const [text, setText] = useState()
@@ -27,19 +54,19 @@ function Result ({ result, setResult }) {
   return (
     <div>
       <div>
-      {JSON.stringify(text, null, 2)}
-    </div>
-    <div className="pt-5">
-      <div className="flex justify-end">
-        <button
-          type="button"
-          className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          onClick={handleReset}
-        >
-          Reset
-        </button>
+        {text.map(data => <Domain {...data} />)}
       </div>
-    </div>
+      <div className="pt-5">
+        <div className="flex justify-end">
+          <button
+            type="button"
+            className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
