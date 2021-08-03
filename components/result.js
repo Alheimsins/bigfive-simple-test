@@ -1,11 +1,26 @@
+import { useEffect, useState } from 'react'
+import calculateScore from '@alheimsins/bigfive-calculate-score'
+
 function Result ({ result, setResult }) {
-  const handleReset = () => setResult(false)
+  const [score, setScore] = useState()
+
+  const handleReset = () => {
+    setScore(false)
+    setResult(false)
+  }
+
+  useEffect(() => {
+    if (result) {
+      setScore(calculateScore(result))
+    }
+  }, [result])
+
   if (!result) return null
 
   return (
     <div>
       <div>
-      {JSON.stringify(result, null, 2)}
+      {JSON.stringify(score, null, 2)}
     </div>
     <div className="pt-5">
       <div className="flex justify-end">
