@@ -6,6 +6,7 @@ function Choice ( props ) {
         id={`${id}-score-${score}`}
         name={`${id}-score`}
         type="radio"
+        required
         value={score}
         className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
       />
