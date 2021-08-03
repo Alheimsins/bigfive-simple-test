@@ -16,7 +16,7 @@ function Facet (props) {
 }
 
 function Domain ( props ) {
-  const { title, shortDescription, description, text, score, facets } = props
+  const { domain, title, shortDescription, description, text, score, facets } = props
   return (
     <div className='mb-5'>
       <h1 className='text-4xl'>{title}</h1>

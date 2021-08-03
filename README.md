@@ -1,7 +1,5 @@
 # bigfive-simple-test
 
-WORK IN PROGRESS
-
 Take a big five test on your local machine and save the result.
 
 # Setup
