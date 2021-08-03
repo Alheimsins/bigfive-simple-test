@@ -11,6 +11,13 @@ Take a big five test on your local machine and save the result.
 - take the test
 - all tests will be saved to disk in the `/results` folder
 
+## Advanced
+
+- To change the test language change [config.js](config.js) to anything supported by b5-johnson-120-ipip-neo-pi-r
+
+The saved tests are the raw answer data.
+If you want to render the test result later you'll need to run the data through `bigfive-calculate-score` and `b5-result-text`
+
 ## Related
 
 - [b5-johnson-120-ipip-neo-pi-r](https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r) Module for returning Big Five Johnson 120 IPIP-NEO-PI-R items

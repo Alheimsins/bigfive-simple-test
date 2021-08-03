@@ -21,7 +21,7 @@ function Domain ( props ) {
     <div className='mb-5'>
       <h1 className='text-4xl'>{title}</h1>
       <p>{shortDescription}</p>
-      <p className='mb-2'>Score: {score}</p>
+      <p className='mb-2 font-semibold'>Score: {score}</p>
       <p dangerouslySetInnerHTML={{ __html: text }}></p>
       <p dangerouslySetInnerHTML={{ __html: description }}></p>
       <h2 className='text-2xl mb-2 mt-2'>Facets</h2>
