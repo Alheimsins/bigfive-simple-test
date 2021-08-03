@@ -6,7 +6,7 @@ import Result from '../components/result'
 
 function HomePage() {
   const [questions, setQuestions] = useState()
-  const result = null
+  const [result, setResult] = useState()
 
   useEffect(() => {
     setQuestions(getItems(config.language, true))
@@ -17,8 +17,8 @@ function HomePage() {
       <main className='flex-grow'>
         <div className='max-w-7xl mx-auto py-6 sm:px-6 lg:px-8'>
           <div className='px-4 py-4 sm:px-0'>
-            <Questions questions={questions} />
-            <Result result={result} />
+            <Questions questions={questions} result={result} setResult={setResult} />
+            <Result result={result} setResult={setResult} />
           </div>
         </div>
       </main>

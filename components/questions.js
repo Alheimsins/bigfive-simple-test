@@ -3,7 +3,7 @@ import generatePayload from '../lib/generate-payload'
 import repackAnswers from '../lib/repack-answers'
 import Question from './question'
 
-function Questions ({ questions }) {
+function Questions ({ questions, result, setResult }) {
 
   const handleCancel = event => {
     event.preventDefault()
@@ -22,12 +22,14 @@ function Questions ({ questions }) {
     try {
       await axios.post('/api/save', payload)
       form.reset()
+      setResult(payload)
     } catch (error) {
       console.error(error)
     }
   }
 
   if (!questions) return null;
+  if (result) return null;
 
   return (
     <div>
