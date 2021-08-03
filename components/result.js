@@ -1,8 +1,12 @@
 import { useEffect, useState } from 'react'
 import calculateScore from '@alheimsins/bigfive-calculate-score'
+import generateResult from '@alheimsins/b5-result-text'
+
+import config from '../config'
 
 function Result ({ result, setResult }) {
   const [score, setScore] = useState()
+  const [text, setText] = useState()
 
   const handleReset = () => {
     setScore(false)
@@ -13,14 +17,17 @@ function Result ({ result, setResult }) {
     if (result) {
       setScore(calculateScore(result))
     }
-  }, [result])
+    if (score) {
+      setText(generateResult({ scores: score, lang: config.language }))
+    }
+  }, [result, score])
 
   if (!result) return null
 
   return (
     <div>
       <div>
-      {JSON.stringify(score, null, 2)}
+      {JSON.stringify(text, null, 2)}
     </div>
     <div className="pt-5">
       <div className="flex justify-end">
