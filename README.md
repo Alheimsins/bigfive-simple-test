@@ -13,7 +13,7 @@ Take a big five test on your local machine and save the result.
 
 ## Advanced
 
-- To change the test language change [config.js](config.js) to anything supported by b5-johnson-120-ipip-neo-pi-r
+- To change the test language change `language` in [config.js](config.js) to anything supported by [b5-johnson-120-ipip-neo-pi-r](https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r#supported-languages)
 
 The saved tests are the raw answer data.
 If you want to render the test result later you'll need to run the data through `bigfive-calculate-score` and `b5-result-text`
