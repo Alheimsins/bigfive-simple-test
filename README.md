@@ -4,8 +4,9 @@ Take a big five test on your local machine and save the result.
 
 # Setup
 
-- download or clone the repo
-- install dependencies `npm i`
+- you'll need [Node.js](https://nodejs.org/en/) >= 14 on your machine
+- download or clone this repo
+- go to project root and install dependencies `npm i`
 - start the server `npm run dev`
 - go to [http://localhost:3000](http://localhost:3000)
 - take the test
