@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getItems } from '@alheimsins/b5-johnson-120-ipip-neo-pi-r'
+
+import pkg from '../package.json'
 import config from '../config'
 import Intro from '../components/intro'
 import LoadFile from '../components/load-file'
@@ -40,6 +42,9 @@ function HomePage() {
           </div>
         </div>
       </main>
+      <footer className='flex justify-end p-2 text-gray-500'>
+        {pkg.name} - {pkg.version}
+      </footer>
     </div>
   )
 }
