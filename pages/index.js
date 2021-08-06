@@ -27,7 +27,7 @@ function HomePage() {
   }
 
   useEffect(() => {
-    setQuestions(getItems(config.language, true))
+    setQuestions(getItems(config.language, config.randomizeQuestions))
   }, [])
 
   return (

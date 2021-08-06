@@ -1,5 +1,6 @@
 const config = {
   language: 'en',
+  randomizeQuestions: true,
   directory: 'results'
 }
 

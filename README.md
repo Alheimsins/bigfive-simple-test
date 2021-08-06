@@ -19,6 +19,7 @@ If you want to render the test result later you'll need to run the data through 
 
 - To change the test language change `language` in [config.js](config.js) to anything supported by [b5-johnson-120-ipip-neo-pi-r](https://github.com/Alheimsins/b5-johnson-120-ipip-neo-pi-r#supported-languages)
 - If you don't want to run the site in dev-mode you can build it `npm run build` and use `npm start`
+- if you want the questions in the same order everytime change `randomizeQuestions` to `false` in [config.js](config.js)
 
 ## Related
 
