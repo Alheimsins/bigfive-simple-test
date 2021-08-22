@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Alheimsins/bigfive-simple-test#readme",
   "dependencies": {
-    "@alheimsins/b5-johnson-120-ipip-neo-pi-r": "6.0.2",
+    "@alheimsins/b5-johnson-120-ipip-neo-pi-r": "6.0.3",
     "@alheimsins/b5-result-text": "5.0.0",
     "@alheimsins/bigfive-calculate-score": "3.0.0",
     "@tailwindcss/forms": "0.3.3",
