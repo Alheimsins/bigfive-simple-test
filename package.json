@@ -27,7 +27,7 @@
     "@alheimsins/b5-result-text": "5.0.0",
     "@alheimsins/bigfive-calculate-score": "3.0.0",
     "@tailwindcss/forms": "0.3.3",
-    "autoprefixer": "10.3.2",
+    "autoprefixer": "10.3.3",
     "axios": "0.21.1",
     "nanoid": "3.1.25",
     "next": "11.1.0",
