@@ -26,7 +26,7 @@
     "@alheimsins/b5-johnson-120-ipip-neo-pi-r": "6.0.4",
     "@alheimsins/b5-result-text": "5.0.1",
     "@alheimsins/bigfive-calculate-score": "3.0.1",
-    "@tailwindcss/forms": "0.3.4",
+    "@tailwindcss/forms": "0.4.0",
     "autoprefixer": "10.4.0",
     "axios": "0.24.0",
     "nanoid": "3.1.30",
