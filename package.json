@@ -1,6 +1,6 @@
 {
   "name": "bigfive-simple-test",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Take a big five test on your local machine and save the result",
   "main": "index.js",
   "scripts": {
