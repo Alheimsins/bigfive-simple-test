@@ -29,7 +29,7 @@
     "@tailwindcss/forms": "0.5.2",
     "autoprefixer": "10.4.8",
     "axios": "0.27.2",
-    "nanoid": "3.3.4",
+    "nanoid": "4.0.0",
     "next": "12.2.5",
     "postcss": "8.4.16",
     "react": "18.2.0",
